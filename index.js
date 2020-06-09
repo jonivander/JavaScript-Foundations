@@ -4,7 +4,7 @@
 /* Create variables for principal, interest rate, and years. Assign them the values 200000, 0.05, and 30 respectively. Create another value called name and give it the value of your own name.
 */
 
-let principal = 20000;
+let principal = 200000;
 
 let interestRate = 0.05;
 
@@ -45,11 +45,11 @@ When your math is correct, monthlyRate will equal 1073.64
 */
 
 
-let n1 = Math.pow(1 + monthlyInterestRate, periods);
-let n2 = n1*monthlyInterestRate;
-let numerator = n1*n2;
-let denominator = n1-1;
-let monthlyRate = numerator/denominator;
+let n1 = Math.pow((1 + monthlyInterestRate), periods);
+let n2 = n1 * monthlyInterestRate;
+let numerator = n2;
+let denominator = n1 - 1;
+let monthlyRate = principal * numerator/denominator;
 console.log(monthlyRate)
 
 
