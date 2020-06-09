@@ -50,7 +50,7 @@ let n2 = n1 * monthlyInterestRate;
 let numerator = n2;
 let denominator = n1 - 1;
 let monthlyRate = principal * numerator/denominator;
-console.log(monthlyRate)
+
 
 
 
@@ -60,7 +60,11 @@ console.log(monthlyRate)
 If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly rate is 1073.64"
 */
 
+function mortgageCalculator(N) {
+    return `${N}, your monthly rate is ${monthlyRate}`
+}
 
+    console.log (mortgageCalculator(name))
 
 
 
