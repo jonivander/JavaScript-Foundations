@@ -47,9 +47,8 @@ When your math is correct, monthlyRate will equal 1073.64
 
 let n1 = Math.pow((1 + monthlyInterestRate), periods);
 let n2 = n1 * monthlyInterestRate;
-let numerator = n2;
 let denominator = n1 - 1;
-let monthlyRate = principal * numerator/denominator;
+let monthlyRate = principal * n2/denominator;
 
 
 
@@ -63,8 +62,7 @@ If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly 
 function mortgageCalculator(N) {
     return `${N}, your monthly rate is ${monthlyRate}`
 }
-
-    console.log (mortgageCalculator(name))
+    // console.log (mortgageCalculator(name))
 
 
 
@@ -75,7 +73,14 @@ For example,
 mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
 */
 
-
+function mortgageCalculator (P, I, N){
+    let n1 = Math.pow((1 + monthlyInterestRate), periods);
+    let n2 = n1 * monthlyInterestRate;
+    let denominator = n1 - 1;
+    let monthlyRate = principal * n2/denominator;
+    return `${name}, your monthly rate is ${monthlyRate}`;
+}
+console.log(mortgageCalculator(200000, 0.05, 30))
 
 
 
